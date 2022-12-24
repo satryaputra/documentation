@@ -3,7 +3,7 @@ const screen = document.querySelector('.screen');
 const thumbs = document.querySelectorAll('.thumb');
 
 container.addEventListener('click', function(e) {
-    // cek yang di klik adalah thumb
+    // cek yang di klik adalah thumb 
     if( e.target.className = 'thumb') {
         screen.src = e.target.src;
         screen.classList.add('fade');
