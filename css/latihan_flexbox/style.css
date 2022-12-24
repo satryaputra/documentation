@@ -1,0 +1,177 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ddd;
+    line-height: 1.65;
+    padding-bottom: 1000px;
+}
+
+/* latihan 1 */
+.container-satu {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+}
+
+.kolom-utama {
+    flex: 3;
+    order: 2;
+}
+
+.sidebar-satu {
+    flex: 1;
+    order: 1;
+}
+
+.sidebar-dua {
+    flex: 1;
+    order: 3;
+}
+
+/* Latihan 2 */
+.container-dua {
+    max-width: 800px;
+    margin: 50px auto;
+    
+}
+
+.layanan {
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.layanan.satu {
+    background-color: lightblue;
+}
+
+.layanan.dua {
+    background-color: lightcoral;
+}
+
+.layanan.tiga {
+    background-color: lightgreen;
+}
+
+/* latihan 3 */
+.container-tiga {
+    max-width: 800px;
+    margin: 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.thumbnail {
+    width: 50%;
+}
+
+.thumbnail img {
+    width: 100%;
+}
+
+/* latihan 4 */
+.container-empat {
+    width: 400px;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+    -ms-transition: all .3s linear;
+    -o-transition: all .3s linear;
+}
+
+.card {
+    border: 2px solid darkgrey;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    background-color: lightcyan;
+    box-sizing: border-box;
+    margin: 10px;
+}
+
+.card .header {
+    height: 150px;
+    background-color: darkseagreen;
+    
+}
+
+.card .content {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.card.besar{
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    box-shadow: 0 3px 5px 1px rgba(0, 0, 0, 0.5);
+}
+
+/* latihan 5 */
+.container-lima {
+    height: 500px;
+    width: 500px;
+    margin: 50px auto;
+    border: 5px solid black;
+    display: flex;
+}
+.kotak {
+    width: 100px;
+    height: 100px;
+    background-color: brown;
+    color: white;
+    margin: auto;
+    display: flex;
+    text-align: center;
+}
+
+.kotak span {
+    margin: auto;
+}
+
+/* responsive */
+@media (min-width: 600px) {
+    .container-dua {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .layanan {
+        width: 30%;
+    }
+
+    .thumbnail {
+        width: 25%;
+    }
+
+}
+
+@media (min-width: 800px) {
+    .container-empat {
+        width: 800px;
+        margin: 50px auto;
+        display: flex;
+        flex-direction: row;
+        transition: all .3s linear;
+        -webkit-transition: all .3s linear;
+        -moz-transition: all .3s linear;
+        -ms-transition: all .3s linear;
+        -o-transition: all .3s linear;
+}
+}
+
+
