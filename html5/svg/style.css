@@ -1,0 +1,30 @@
+svg {
+    display: block;
+    margin: 30px;
+}
+
+.satu {
+    background-color: #dddd;
+    width: 300px;
+    height: 300px;
+}
+
+.kotak1 {
+    width: 100px;
+    height: 100px;
+    fill: salmon;
+    x: 100;
+    y: 100;
+}
+
+.dua {
+    background-color: #eee;
+}
+
+.dua rect {
+    fill: lightgreen;
+}
+
+.dua circle {
+    fill: blue;
+}
