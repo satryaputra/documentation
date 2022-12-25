@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Storage</title>
+    <style>
+        button{
+            margin: 10px;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        .dark-mode{
+            background-color: #222;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <h1></h1>
+    <a href="" onclick="gantiNama()">Ganti Nama</a>
+    <a href="" onclick="hapusNama()">Hapus Nama</a>
+    <br>
+    <button class="darkModeToggle">Ubah ke Mode Gelap</button>
+    <br><br>
+    <button onclick="hapusStorage()">Hapus Storage</button>
+
+
+    <script>
+        const judul = document.querySelector('h1');
+        let nama = localStorage.getItem('nama');
+        if( !nama ) {
+            nama = prompt('masukan nama anda: ');
+            localStorage.setItem('nama', nama);
+        }
+        
+        judul.innerHTML = `Halo, ${nama}!`;
+        
+        // ganti nama
+        let gantiNama = (e) => {
+            nama = prompt('masukan nama baru anda: ');
+            localStorage.setItem('nama', nama);
+            e.preventDefault();
+        } 
+        
+        // hapus nama
+        let hapusNama = (e) => {
+            localStorage.removeItem('nama');
+            e.preventDefault();
+        } 
+        
+        // Toggle Dark Mode
+        const toggleDarkMode = document.querySelector('.darkModeToggle');
+
+        let theme = localStorage.getItem('theme');
+
+        if ( !theme ) {
+            localStorage.setItem('theme', 'light');
+        }
+
+        const darkMode = () => {
+            document.body.classList.add('dark-mode');
+            toggleDarkMode.innerHTML = 'Ubah ke Mode Terang';
+            localStorage.setItem('theme', 'dark');
+        };
+        
+        const lightMode = () => {
+            document.body.classList.remove('dark-mode');
+            toggleDarkMode.innerHTML = 'Ubah ke Mode Gelap';
+            localStorage.setItem('theme', 'light');
+        };
+
+        if( theme == 'dark' ) {
+            darkMode();
+        }
+
+        toggleDarkMode.addEventListener('click', function() {
+            theme = localStorage.getItem('theme');
+            if(theme === 'light') {
+                darkMode();
+            } else {
+                lightMode();
+            }
+        });
+
+        const hapusStorage = () => {
+            localStorage.clear();
+        }
+    </script>
+</body>
+</html>
