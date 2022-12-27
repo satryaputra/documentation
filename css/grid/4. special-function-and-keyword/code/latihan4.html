@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CSS Grid | Auto Flow</title>
+    <title>CSS Grid | MinMax</title>
     <style>
       html,
       body {
@@ -13,18 +13,10 @@
       }
 
       .container {
-        width: 600px;
+        width: 80%;
         margin: 50px auto;
         display: grid;
-        grid-template-columns: 50px 200px;
-        grid-template-rows: 100px 50px;
-
-        /* implisit track */
-        grid-auto-columns: 400px;
-        /* grid-auto-rows: 400px; */
-
-        /* Auto Flow */
-        grid-auto-flow: column;
+        grid-template-columns: minmax(200px, 300px) 1fr 1fr;
       }
 
       .item {

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CSS Grid | Columns & Rows</title>
+    <title>CSS Grid | Repeat</title>
     <style>
       html,
       body {
@@ -13,14 +13,10 @@
       }
 
       .container {
-        width: 600px;
+        width: 60%;
         margin: 50px auto;
         display: grid;
-        /* grid-template-columns: 25% auto 50px; */
-        grid-template-rows: 50px 100px auto;
-
-        /* Grid Line Name */
-        grid-template-columns: [awal] 25% [kolom2] auto [k3] 50px [empat];
+        grid-template-columns: repeat(9, 1fr) repeat(2, 2fr);
       }
 
       .item {
